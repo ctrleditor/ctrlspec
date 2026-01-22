@@ -13,6 +13,21 @@ curl -fsSL https://raw.githubusercontent.com/ctrleditor/ctrlspec/main/install.sh
 
 That's it! The script downloads templates, creates symlinks, and sets up MCP configuration.
 
+### What the Script Does
+
+The `install.sh` script:
+1. **Downloads 7 documentation templates** into `docs/` directory
+2. **Creates AI tool symlinks:**
+   - `CLAUDE.md` → `docs/llm.md` (Claude Code)
+   - `.cursorrules` → `docs/llm.md` (Cursor)
+   - `AGENTS.md` → `docs/llm.md` (other agents)
+   - `.cursor/rules` and `.cursor/mcp.json` (Cursor IDE)
+   - `.config/claude/mcp_config.json` (Claude Code)
+3. **Sets up MCP configuration** for integration with external data sources
+4. **Works on Linux, macOS, and Windows** (with WSL)
+
+The script is idempotent—you can run it multiple times safely. It backs up any existing files automatically.
+
 ## What You Get
 
 - 🗺️ **docs/llm.md** - Guide for AI assistants
