@@ -8,10 +8,15 @@ CtrlSpec provides documentation templates that give AI tools (Claude Code, Curso
 
 ```bash
 # One-line installation
-curl -fsSL https://raw.githubusercontent.com/ctrleditor/ctrlspec/main/install.sh | sh
+curl -fsSL https://ctrleditor.com/spec.sh | sh
 ```
 
 That's it! The script downloads templates, creates symlinks, and sets up MCP configuration.
+
+> **Alternative:** If `ctrleditor.com/spec.sh` isn't available yet, use:
+> ```bash
+> curl -fsSL https://raw.githubusercontent.com/ctrleditor/ctrlspec/main/install.sh | sh
+> ```
 
 ### What the Script Does
 
