@@ -124,6 +124,14 @@ copy_file() {
         return 0
     fi
 
+    # Don't overwrite root README.md
+    if [ "$(basename "$dest")" = "README.md" ] && [ "$(dirname "$dest")" = "." ]; then
+        if [ -f "$dest" ]; then
+            log_warn "Root README.md exists, skipping"
+            return 0
+        fi
+    fi
+
     cp "$source" "$dest"
     log_info "Copied: $filename"
     return 0
@@ -136,6 +144,14 @@ download_file() {
     local filename=$(basename "$dest")
 
     mkdir_safe "$(dirname "$dest")"
+
+    # Don't overwrite root README.md
+    if [ "$(basename "$dest")" = "README.md" ] && [ "$(dirname "$dest")" = "." ]; then
+        if [ -f "$dest" ]; then
+            log_warn "Root README.md exists, skipping"
+            return 0
+        fi
+    fi
 
     if command -v curl &> /dev/null; then
         if curl -fsSL "$source" -o "$dest"; then
