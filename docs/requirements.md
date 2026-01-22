@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-CtrlSpec provides structured documentation templates designed specifically to help AI coding assistants (Claude Code, Cursor) understand and navigate codebases effectively. Named after medieval navigation charts, CtrlSpec creates a "map" of projects through comprehensive, AI-friendly documentation. It bridges the gap between developer knowledge and AI context by capturing business rationale, technical decisions, constraints, and architecture in living, version-controlled documents.
+CtrlSpec provides structured documentation templates designed specifically to help AI coding assistants (Claude Code, Cursor) understand and navigate codebases effectively. It creates comprehensive documentation of projects through AI-friendly templates that bridge the gap between developer knowledge and AI context by capturing business rationale, technical decisions, constraints, and architecture in living, version-controlled documents.
 
 ## Business Goals
 

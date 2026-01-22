@@ -1,8 +1,8 @@
 # CtrlSpec
 
-_Chart your codebase for AI coding assistants_
+_Structured documentation for AI coding assistants_
 
-CtrlSpec provides documentation templates that give AI tools (Claude Code, Cursor) the context they need to understand your project. Named after medieval navigation charts that guided sailors through uncharted waters, CtrlSpec helps AI navigate your codebase.
+CtrlSpec provides documentation templates that give AI tools (Claude Code, Cursor) the context they need to understand your project. CtrlSpec helps AI navigate your codebase through comprehensive, well-organized documentation.
 
 ## Quick Start
 
@@ -33,7 +33,7 @@ AI coding assistants work best with context. CtrlSpec provides:
 - **Constraints** (what we can't do)
 - **Decisions** (why we made certain choices)
 
-Like the medieval ctrlspec charts that evolved through communal knowledge sharing, your documentation becomes a living map that guides AI through your codebase.
+Your documentation becomes a living source of truth that guides AI through your codebase and keeps institutional knowledge current as your project evolves.
 
 ## MCP Integration
 
