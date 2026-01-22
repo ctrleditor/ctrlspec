@@ -1,0 +1,10 @@
+# Bun configuration
+# https://bun.sh/docs/runtime/configuration
+
+[build]
+# Bun will compile TypeScript natively
+target = "bun"
+
+[install]
+# Use latest versions
+optional = false

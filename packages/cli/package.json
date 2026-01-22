@@ -1,0 +1,32 @@
+{
+  "name": "portolan",
+  "version": "0.1.0",
+  "description": "CLI for managing AI-friendly documentation",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "portolan": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "bun src/cli.ts",
+    "test": "bun test tests/**/*.test.ts"
+  },
+  "keywords": [
+    "documentation",
+    "ai",
+    "claude",
+    "cursor",
+    "mcp"
+  ],
+  "author": "Erik Wright",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "ora": "^9.0.0",
+    "remark": "^15.0.1",
+    "remark-parse": "^11.0.0"
+  },
+  "devDependencies": {}
+}

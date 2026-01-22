@@ -1,0 +1,17 @@
+{
+  "name": "ctrlspec",
+  "version": "0.1.0",
+  "description": "CtrlSpec: Specification and validation framework for Ctrl editor",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd packages/cli dev",
+    "test": "bun test",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "check": "biome check . && bun test"
+  }
+}

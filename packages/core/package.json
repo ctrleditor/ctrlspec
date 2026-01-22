@@ -1,0 +1,27 @@
+{
+  "name": "@portolan/core",
+  "version": "0.1.0",
+  "description": "Core utilities for Portolan documentation validation and parsing",
+  "private": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./types": "./dist/types.js",
+    "./markdown": "./dist/markdown.js",
+    "./validators": "./dist/validators.js"
+  },
+  "scripts": {
+    "test": "bun test tests/**/*.test.ts"
+  },
+  "keywords": [
+    "documentation",
+    "parsing",
+    "validation",
+    "markdown"
+  ],
+  "author": "Erik Wright",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
