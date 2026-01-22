@@ -1,5 +1,5 @@
 /**
- * Portolan Core - Shared utilities and types
+ * CtrlSpec Core - Shared utilities and types
  */
 
 export * from "./types.js";

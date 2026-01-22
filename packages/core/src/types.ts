@@ -1,8 +1,8 @@
 /**
- * Core types for Portolan documentation system
+ * Core types for CtrlSpec documentation system
  */
 
-export interface PortolanDoc {
+export interface CtrlSpecDoc {
   path: string;
   name:
     | "llm"

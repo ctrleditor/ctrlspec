@@ -1,7 +1,7 @@
 import { describe, it, expect } from "bun:test";
 
 describe("check command", () => {
-  it("should validate Portolan docs completeness", () => {
+  it("should validate CtrlSpec docs completeness", () => {
     expect(true).toBe(true);
   });
 

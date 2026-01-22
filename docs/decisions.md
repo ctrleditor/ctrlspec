@@ -13,9 +13,9 @@ Each decision includes:
 ## Decisions
 
 ### 2025-01-19: Build CLI with command-first approach (check before init)
-- **Commit:** [613a016](https://github.com/oheriko/portolan/commit/613a016)
+- **Commit:** [613a016](https://github.com/ctrleditor/ctrlspec/commit/613a016)
 - **Status:** Active
-- **Summary:** Start Phase 2 with `portolan check` command, not `init`, to validate parsing pipeline early
+- **Summary:** Start Phase 2 with `ctrlspec check` command, not `init`, to validate parsing pipeline early
 
 **Decision Context:**
 Current `install.sh` already handles initialization. What's missing is inspection and validation. Building `check` first provides immediate value and validates the entire architecture before building UI.
@@ -23,7 +23,7 @@ Current `install.sh` already handles initialization. What's missing is inspectio
 **Rationale:**
 - Validates core utilities (markdown parser, TODO detector, git scanner) are solid
 - Provides working tool in Week 1 instead of waiting for full framework
-- Can test immediately on Portolan's own documentation
+- Can test immediately on CtrlSpec's own documentation
 - Better foundation for subsequent commands
 - Delivers value to users faster
 - Unblocks `sync` and `init` from relying on validation
@@ -37,7 +37,7 @@ Current `install.sh` already handles initialization. What's missing is inspectio
 ---
 
 ### 2025-01-19: Use TypeScript + Bun for CLI tooling
-- **Commit:** [613a016](https://github.com/oheriko/portolan/commit/613a016)
+- **Commit:** [613a016](https://github.com/ctrleditor/ctrlspec/commit/613a016)
 - **Status:** Active
 - **Summary:** CLI implemented in TypeScript with Bun runtime instead of Bash
 
@@ -61,12 +61,12 @@ Bash installation script works but CLI needs more sophisticated features (parsin
 ---
 
 ### 2024-01-15: Use Bash for installation script instead of Python/Node
-- **Commit:** [Initial commit](https://github.com/oheriko/portolan)
+- **Commit:** [Initial commit](https://github.com/ctrleditor/ctrlspec)
 - **Status:** Active
 - **Summary:** Installation script must be POSIX-compatible bash with zero runtime dependencies
 
 **Decision Context:**
-Portolan needs maximum compatibility across all Unix-like systems (Linux, macOS, WSL). Bash with no external dependencies ensures the installation works on minimal systems, locked-down corporate machines, and containers.
+CtrlSpec needs maximum compatibility across all Unix-like systems (Linux, macOS, WSL). Bash with no external dependencies ensures the installation works on minimal systems, locked-down corporate machines, and containers.
 
 **Rationale:**
 - Bash is pre-installed on virtually all Unix-like systems
@@ -91,12 +91,12 @@ Portolan needs maximum compatibility across all Unix-like systems (Linux, macOS,
 ---
 
 ### 2024-01-15: Use Markdown for templates instead of HTML/PDF/Confluence
-- **Commit:** [Initial commit](https://github.com/oheriko/portolan)
+- **Commit:** [Initial commit](https://github.com/ctrleditor/ctrlspec)
 - **Status:** Active
 - **Summary:** All documentation templates must be GitHub Flavored Markdown stored in git
 
 **Decision Context:**
-Portolan's core value is keeping documentation version-controlled and close to code. Markdown ensures universal rendering and editing.
+CtrlSpec's core value is keeping documentation version-controlled and close to code. Markdown ensures universal rendering and editing.
 
 **Rationale:**
 - Renders on GitHub, GitLab, Gitea, and any text editor
@@ -121,7 +121,7 @@ Portolan's core value is keeping documentation version-controlled and close to c
 ---
 
 ### 2024-01-15: Create symlinks instead of copying documentation
-- **Commit:** [Initial commit](https://github.com/oheriko/portolan)
+- **Commit:** [Initial commit](https://github.com/ctrleditor/ctrlspec)
 - **Status:** Active
 - **Summary:** Use symlinks to point AI tools to docs/llm.md instead of duplicating files
 
@@ -156,12 +156,12 @@ AI tools expect documentation in specific locations (CLAUDE.md, .cursorrules). S
 ---
 
 ### 2024-01-15: Distribute via GitHub instead of npm/PyPI/Homebrew
-- **Commit:** [Initial commit](https://github.com/oheriko/portolan)
+- **Commit:** [Initial commit](https://github.com/ctrleditor/ctrlspec)
 - **Status:** Active
 - **Summary:** Primary distribution channel is GitHub (raw.githubusercontent.com) with direct clone as fallback
 
 **Decision Context:**
-Portolan is templates and scripts, not a compiled package. GitHub is the natural home for open source, already has CDN, and requires no additional setup.
+CtrlSpec is templates and scripts, not a compiled package. GitHub is the natural home for open source, already has CDN, and requires no additional setup.
 
 **Rationale:**
 - GitHub is already where developers are
@@ -188,13 +188,13 @@ Could eventually add to Homebrew, AUR, but not priority given simplicity of curr
 
 ---
 
-### 2024-01-15: Make Portolan stateless and offline-capable
-- **Commit:** [Initial commit](https://github.com/oheriko/portolan)
+### 2024-01-15: Make CtrlSpec stateless and offline-capable
+- **Commit:** [Initial commit](https://github.com/ctrleditor/ctrlspec)
 - **Status:** Active
 - **Summary:** No external dependencies, no cloud backend, all data stays in user's git repo
 
 **Decision Context:**
-Portolan should be simple, trustworthy, and work in any environment including offline, corporate networks, and airgapped systems.
+CtrlSpec should be simple, trustworthy, and work in any environment including offline, corporate networks, and airgapped systems.
 
 **Rationale:**
 - Simpler to understand and audit
@@ -218,7 +218,7 @@ Portolan should be simple, trustworthy, and work in any environment including of
 ---
 
 ### 2024-01-15: Use Conventional Commits and include decisions in commit messages
-- **Commit:** [Initial commit](https://github.com/oheriko/portolan)
+- **Commit:** [Initial commit](https://github.com/ctrleditor/ctrlspec)
 - **Status:** Active
 - **Summary:** Decisions captured in git commits become the authoritative history of "why"
 
@@ -257,12 +257,12 @@ Consequences:
 ---
 
 ### 2024-01-15: MIT License for maximum compatibility
-- **Commit:** [Initial commit](https://github.com/oheriko/portolan)
+- **Commit:** [Initial commit](https://github.com/ctrleditor/ctrlspec)
 - **Status:** Active
 - **Summary:** All code and templates must be MIT-licensed, never GPL or copyleft
 
 **Decision Context:**
-Portolan must be usable in any project (commercial, proprietary, closed-source). This requires maximum license permissiveness.
+CtrlSpec must be usable in any project (commercial, proprietary, closed-source). This requires maximum license permissiveness.
 
 **Rationale:**
 - MIT is permissive; no "share-alike" requirements

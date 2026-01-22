@@ -2,7 +2,7 @@
 
 ## Philosophy
 
-Portolan is a documentation distribution framework with minimal runtime code. Testing focuses on:
+CtrlSpec is a documentation distribution framework with minimal runtime code. Testing focuses on:
 - **Templates**: Validating markdown structure and completeness
 - **Installation script**: Testing bash script logic (symlink creation, file copying, error handling)
 - **Compatibility**: Ensuring it works across different OS and shell environments
@@ -15,7 +15,7 @@ We emphasize **integration and compatibility testing** over unit tests, since th
 ### Directory Layout
 
 ```
-portolan/
+ctrlspec/
 ├── tests/                          # Test scripts and fixtures
 │   ├── fixtures/                   # Test data
 │   │   ├── sample-project/         # Mock project to test install on
@@ -264,7 +264,7 @@ Located in `tests/fixtures/templates/`:
 bash -x tests/install.test.sh test_name
 
 # Check what files were created
-ls -la /tmp/portolan-test/
+ls -la /tmp/ctrlspec-test/
 
 # Verify symlink was created
 ls -l CLAUDE.md
@@ -288,11 +288,11 @@ grep "\[TODO" docs/*.md
 
 ## For LLMs
 
-When generating or modifying Portolan:
+When generating or modifying CtrlSpec:
 - Run tests locally before submitting changes
 - Test on at least Linux (GitHub Actions for free)
 - Ensure backwards compatibility; don't break existing installations
 - Update tests when adding new features
-- Remember: Portolan is mostly static files; focus on integration tests
+- Remember: CtrlSpec is mostly static files; focus on integration tests
 - Test that symlinks work correctly (common failure point)
 - Validate that all templates still render in GitHub/GitLab

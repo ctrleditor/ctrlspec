@@ -1,14 +1,14 @@
-# Portolan
+# CtrlSpec
 
 _Chart your codebase for AI coding assistants_
 
-Portolan provides documentation templates that give AI tools (Claude Code, Cursor) the context they need to understand your project. Named after medieval navigation charts that guided sailors through uncharted waters, Portolan helps AI navigate your codebase.
+CtrlSpec provides documentation templates that give AI tools (Claude Code, Cursor) the context they need to understand your project. Named after medieval navigation charts that guided sailors through uncharted waters, CtrlSpec helps AI navigate your codebase.
 
 ## Quick Start
 
 ```bash
 # One-line installation
-curl -fsSL https://raw.githubusercontent.com/oheriko/portolan/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/ctrleditor/ctrlspec/main/install.sh | sh
 ```
 
 That's it! The script downloads templates, creates symlinks, and sets up MCP configuration.
@@ -27,17 +27,17 @@ That's it! The script downloads templates, creates symlinks, and sets up MCP con
 
 ## Philosophy
 
-AI coding assistants work best with context. Portolan provides:
+AI coding assistants work best with context. CtrlSpec provides:
 - **Business context** (why we're building this)
 - **Technical context** (how it's built)
 - **Constraints** (what we can't do)
 - **Decisions** (why we made certain choices)
 
-Like the medieval portolan charts that evolved through communal knowledge sharing, your documentation becomes a living map that guides AI through your codebase.
+Like the medieval ctrlspec charts that evolved through communal knowledge sharing, your documentation becomes a living map that guides AI through your codebase.
 
 ## MCP Integration
 
-Portolan includes configuration for MCP servers to auto-populate your docs:
+CtrlSpec includes configuration for MCP servers to auto-populate your docs:
 - **Atlassian MCP** - Pull requirements from Jira/Confluence
 - **Fathom AI MCP** - Search meeting transcripts and extract decisions
 

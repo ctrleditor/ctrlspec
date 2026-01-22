@@ -2,7 +2,7 @@
 
 ## Distribution Model
 
-Portolan is distributed via GitHub as an open source project. There are no traditional "environments" (dev/staging/prod). Instead:
+CtrlSpec is distributed via GitHub as an open source project. There are no traditional "environments" (dev/staging/prod). Instead:
 
 - **Development happens on `main` branch** (or feature branches)
 - **Releases are tagged** with semantic versions (v1.0.0, v1.1.0, v2.0.0)
@@ -89,7 +89,7 @@ git push origin v1.2.3
 ```
 
 Then create release on GitHub:
-- Go to https://github.com/oheriko/portolan/releases/new
+- Go to https://github.com/ctrleditor/ctrlspec/releases/new
 - Select the tag you just pushed
 - Title: "Release v1.2.3"
 - Description: Copy from CHANGELOG.md
@@ -102,7 +102,7 @@ Then create release on GitHub:
 - [ ] Tag appears in releases
 - [ ] raw.githubusercontent.com URL works (test after ~30 seconds delay)
   ```bash
-  curl -s https://raw.githubusercontent.com/oheriko/portolan/v1.2.3/install.sh | head -5
+  curl -s https://raw.githubusercontent.com/ctrleditor/ctrlspec/v1.2.3/install.sh | head -5
   ```
 - [ ] Installation instructions still point to correct version or `main`
 
@@ -112,10 +112,10 @@ Then create release on GitHub:
 
 ```bash
 # Always points to latest version on main
-curl -fsSL https://raw.githubusercontent.com/oheriko/portolan/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/ctrleditor/ctrlspec/main/install.sh | sh
 
 # Pin to specific version
-curl -fsSL https://raw.githubusercontent.com/oheriko/portolan/v1.2.3/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/ctrleditor/ctrlspec/v1.2.3/install.sh | sh
 ```
 
 **Advantages:**
@@ -130,8 +130,8 @@ curl -fsSL https://raw.githubusercontent.com/oheriko/portolan/v1.2.3/install.sh 
 ### Secondary: Direct Clone
 
 ```bash
-git clone https://github.com/oheriko/portolan.git
-cd portolan
+git clone https://github.com/ctrleditor/ctrlspec.git
+cd ctrlspec
 bash install.sh
 ```
 
@@ -213,7 +213,7 @@ If release passes tests but breaks real-world installations:
 - **raw.githubusercontent.com**: CDN-backed template delivery
 
 ### Backups & Continuity
-- GitHub repo is backed up to `oheriko/portolan` (redundancy via GitHub)
+- GitHub repo is backed up to `ctrleditor/ctrlspec` (redundancy via GitHub)
 - Releases are immutable once published
 - Community can fork if needed
 
@@ -226,7 +226,7 @@ If release passes tests but breaks real-world installations:
 
 ### Environment Variables
 
-Portolan doesn't use environment variables for installation. However:
+CtrlSpec doesn't use environment variables for installation. However:
 
 **For MCP integration, users set:**
 ```bash
@@ -240,7 +240,7 @@ SKIP_TESTS=1 bash install.sh  # Skip tests in install
 
 ### No Secrets Needed
 
-- Portolan doesn't store secrets
+- CtrlSpec doesn't store secrets
 - No API keys, tokens, or credentials in repo
 - MCP servers configured by users with their own credentials
 
@@ -253,8 +253,8 @@ SKIP_TESTS=1 bash install.sh  # Skip tests in install
 bash tests/install.test.sh
 
 # Manual installation on test machine
-mkdir /tmp/test-portolan
-cd /tmp/test-portolan
+mkdir /tmp/test-ctrlspec
+cd /tmp/test-ctrlspec
 bash /path/to/install.sh
 ls -la CLAUDE.md  # Verify symlink
 
@@ -321,7 +321,7 @@ git tag -l v1.2.3
 git ls-remote --tags origin v1.2.3
 
 # Manually create release if tag exists but release doesn't
-# Go to https://github.com/oheriko/portolan/releases/new
+# Go to https://github.com/ctrleditor/ctrlspec/releases/new
 ```
 
 ### Install Script URL Not Working
@@ -334,10 +334,10 @@ git ls-remote --tags origin v1.2.3
 **Solution:**
 ```bash
 # Test raw URL directly
-curl -I https://raw.githubusercontent.com/oheriko/portolan/v1.2.3/install.sh
+curl -I https://raw.githubusercontent.com/ctrleditor/ctrlspec/v1.2.3/install.sh
 
 # Check GitHub UI for file
-# https://github.com/oheriko/portolan/blob/v1.2.3/install.sh
+# https://github.com/ctrleditor/ctrlspec/blob/v1.2.3/install.sh
 ```
 
 ### Users Getting Old Version
@@ -359,4 +359,4 @@ When preparing a release:
 - Include decision context in commit messages for significant changes
 - Test on multiple platforms before releasing
 - Announce breaking changes prominently
-- Consider impact on existing projects using Portolan
+- Consider impact on existing projects using CtrlSpec

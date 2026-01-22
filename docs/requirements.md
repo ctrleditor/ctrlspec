@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-Portolan provides structured documentation templates designed specifically to help AI coding assistants (Claude Code, Cursor) understand and navigate codebases effectively. Named after medieval navigation charts, Portolan creates a "map" of projects through comprehensive, AI-friendly documentation. It bridges the gap between developer knowledge and AI context by capturing business rationale, technical decisions, constraints, and architecture in living, version-controlled documents.
+CtrlSpec provides structured documentation templates designed specifically to help AI coding assistants (Claude Code, Cursor) understand and navigate codebases effectively. Named after medieval navigation charts, CtrlSpec creates a "map" of projects through comprehensive, AI-friendly documentation. It bridges the gap between developer knowledge and AI context by capturing business rationale, technical decisions, constraints, and architecture in living, version-controlled documents.
 
 ## Business Goals
 
@@ -54,7 +54,7 @@ Portolan provides structured documentation templates designed specifically to he
 
 4. **Installation & Setup Script**
    - Description: One-command installation that downloads templates, creates symlinks, and configures MCP
-   - User story: As a developer, I want to add Portolan to my project in one command so that setup is frictionless
+   - User story: As a developer, I want to add CtrlSpec to my project in one command so that setup is frictionless
    - Acceptance criteria:
      - [ ] `curl | sh` installation script works
      - [ ] Script handles existing files gracefully (backup/merge)
@@ -68,23 +68,23 @@ Portolan provides structured documentation templates designed specifically to he
      - [ ] decisions.md serves as index linking to commits
 
 6. **Modern CLI Tooling** (Phase 2)
-   - Description: TypeScript-based CLI providing validation, synchronization, and management of Portolan documentation using Bun runtime
+   - Description: TypeScript-based CLI providing validation, synchronization, and management of CtrlSpec documentation using Bun runtime
    - User story: As a developer, I want programmatic tools to manage my documentation so that it stays fresh and complete
    - Acceptance criteria:
-     - [ ] `portolan check` validates docs completeness and reports TODOs
-     - [ ] `portolan sync` automatically updates decisions from git history
-     - [ ] `portolan init` scaffolds new projects with templates
-     - [ ] `portolan validate` checks for broken links and missing sections
-     - [ ] `portolan stats` shows documentation coverage metrics
+     - [ ] `ctrlspec check` validates docs completeness and reports TODOs
+     - [ ] `ctrlspec sync` automatically updates decisions from git history
+     - [ ] `ctrlspec init` scaffolds new projects with templates
+     - [ ] `ctrlspec validate` checks for broken links and missing sections
+     - [ ] `ctrlspec stats` shows documentation coverage metrics
      - [ ] Commands have clear, colored output with progress indicators
      - [ ] Works on Linux, macOS, and Windows (WSL)
-     - [ ] Installable via npm as `portolan` CLI
+     - [ ] Installable via npm as `ctrlspec` CLI
      - [ ] Built with Bun runtime and TypeScript
      - [ ] Uses Biome for code quality (linting/formatting)
      - [ ] Monorepo coordinated with Turborepo for task orchestration
 
 7. **Documentation Validation System** (Phase 2)
-   - Description: Parse and analyze Portolan markdown files for completeness
+   - Description: Parse and analyze CtrlSpec markdown files for completeness
    - User story: As a project lead, I want to know if our documentation is complete so that we maintain quality standards
    - Acceptance criteria:
      - [ ] Detect all [TODO] items across documentation
@@ -113,7 +113,7 @@ Portolan provides structured documentation templates designed specifically to he
 - Web-based documentation viewer
 - Support for additional MCP servers beyond Atlassian/Fathom
 - Stack-specific templates (TypeScript, Rust, Go, Zig)
-- MCP server for Portolan (list TODOs, get decisions, validate docs, sync from commits)
+- MCP server for CtrlSpec (list TODOs, get decisions, validate docs, sync from commits)
 
 ## Non-Functional Requirements
 
@@ -121,7 +121,7 @@ Portolan provides structured documentation templates designed specifically to he
 
 - Installation script completes in < 5 seconds
 - Symlink creation is instant
-- No runtime performance impact on projects using Portolan
+- No runtime performance impact on projects using CtrlSpec
 
 ### Security
 
@@ -144,7 +144,7 @@ Portolan provides structured documentation templates designed specifically to he
 
 ## Success Metrics
 
-- Projects using Portolan report better AI assistance quality (measured via feedback)
+- Projects using CtrlSpec report better AI assistance quality (measured via feedback)
 - Reduction in repeated explanations needed when talking to AI tools
 - Documentation completion rate (percentage of templates filled out)
 - Adoption rate among Claude Code and Cursor users
@@ -176,7 +176,7 @@ Portolan provides structured documentation templates designed specifically to he
 
 ## Open Questions
 
-- Should Portolan provide tooling to validate that templates are filled out adequately?
-- How should Portolan handle projects that already have extensive documentation?
+- Should CtrlSpec provide tooling to validate that templates are filled out adequately?
+- How should CtrlSpec handle projects that already have extensive documentation?
 - Should there be a way to customize which sections are required vs. optional?
-- Should Portolan support non-English documentation?
+- Should CtrlSpec support non-English documentation?

@@ -1,5 +1,5 @@
 /**
- * Markdown parsing utilities for Portolan documentation
+ * Markdown parsing utilities for CtrlSpec documentation
  */
 
 import type { TodoItem } from "./types.js";

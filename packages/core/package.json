@@ -1,7 +1,7 @@
 {
-  "name": "@portolan/core",
+  "name": "@ctrlspec/core",
   "version": "0.1.0",
-  "description": "Core utilities for Portolan documentation validation and parsing",
+  "description": "Core utilities for CtrlSpec documentation validation and parsing",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",

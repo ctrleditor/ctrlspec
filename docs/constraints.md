@@ -24,9 +24,9 @@
 - Rationale: One-command install should feel instant; users copy/paste from marketing site
 
 **No runtime performance requirements:**
-- Portolan is static documentation; no servers, databases, or API calls
+- CtrlSpec is static documentation; no servers, databases, or API calls
 - MCP integration (Atlassian, Fathom) is optional and user-initiated
-- Performance responsibility is on the integrated systems, not Portolan
+- Performance responsibility is on the integrated systems, not CtrlSpec
 
 ### Compatibility
 
@@ -60,7 +60,7 @@
 - Can operate completely offline after installation
 - Optional: Atlassian MCP requires user to provide OAuth token
 - Optional: Fathom MCP requires user to provide API key
-- No Portolan-controlled servers or cloud services
+- No CtrlSpec-controlled servers or cloud services
 
 **Hosting:**
 - Primary: GitHub (templates served via raw.githubusercontent.com)
@@ -82,12 +82,12 @@
 **MIT License is mandatory:**
 - All code and templates must be MIT-compatible
 - Cannot use GPL, AGPL, or other copyleft licenses
-- Rationale: Portolan must be usable in any project (commercial, proprietary, etc.)
+- Rationale: CtrlSpec must be usable in any project (commercial, proprietary, etc.)
 - Contributors must agree to MIT when submitting PRs
 
 ### Scope
 
-**What Portolan DOES NOT do:**
+**What CtrlSpec DOES NOT do:**
 - Does not generate code documentation (no JavaDoc, JSDoc generation)
 - Does not replace existing documentation systems (Confluence, Notion, ReadTheDocs)
 - Does not provide hosting for documentation
@@ -96,7 +96,7 @@
 - Does not provide project management or issue tracking
 - Does not include AI model training or data collection
 
-**What Portolan DOES:**
+**What CtrlSpec DOES:**
 - Provides template structure for consistent documentation
 - Creates symlinks so AI tools can find documentation
 - Integrates with MCP servers for data enrichment
@@ -158,7 +158,7 @@
 
 **Rationale for restrictions:**
 - Every additional dependency increases installation friction
-- Portolan must work in any environment (locked-down corporate laptops, servers, minimal VMs)
+- CtrlSpec must work in any environment (locked-down corporate laptops, servers, minimal VMs)
 - Users already have git and bash; adding more is reasonable; adding runtimes is not
 
 ### Dependencies
@@ -183,7 +183,7 @@
 
 ### No Data Collection
 
-**Portolan does not:**
+**CtrlSpec does not:**
 - Collect telemetry or usage data
 - Track installations or users
 - Send data to external servers
@@ -197,15 +197,15 @@
 
 ### Authentication & Authorization
 
-**Portolan has no authentication:**
+**CtrlSpec has no authentication:**
 - No user accounts, passwords, API keys (except for MCP integrations)
 - No permissions model (git permissions apply to documentation)
 - Documentation is part of repository; git controls access
 
 **MCP integrations:**
-- Atlassian MCP: User provides OAuth token (Portolan doesn't store it)
-- Fathom MCP: User provides API key (Portolan doesn't store it)
-- Both are optional; Portolan works without them
+- Atlassian MCP: User provides OAuth token (CtrlSpec doesn't store it)
+- Fathom MCP: User provides API key (CtrlSpec doesn't store it)
+- Both are optional; CtrlSpec works without them
 
 ### Code Security
 
@@ -224,7 +224,7 @@
 
 ### Availability & Support
 
-**Portolan is free and unsupported:**
+**CtrlSpec is free and unsupported:**
 - No SLA or uptime guarantee
 - No support hours or response time commitment
 - Community-driven support (GitHub issues, discussions)
@@ -238,7 +238,7 @@
 ### Monitoring & Maintenance
 
 **No monitoring required:**
-- Portolan is a distribution package; nothing to monitor
+- CtrlSpec is a distribution package; nothing to monitor
 - GitHub Actions or similar can validate templates (future)
 - Community reports issues via GitHub
 
@@ -274,7 +274,7 @@
 **Future MCP servers:**
 - Must be opt-in (disabled by default in .mcp.json)
 - Must include setup instructions
-- Must not require Portolan-controlled services
+- Must not require CtrlSpec-controlled services
 
 ## Known Limitations
 
@@ -302,7 +302,7 @@
 
 ## Trade-offs Accepted
 
-1. **Simplicity over features**: Keep Portolan minimal and focused
+1. **Simplicity over features**: Keep CtrlSpec minimal and focused
    - We're giving up: Rich features, web UI, real-time collaboration
    - Why: Lower maintenance burden, works offline, easy to understand
 

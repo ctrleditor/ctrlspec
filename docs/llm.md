@@ -53,7 +53,7 @@ Suggest semver bumps based on commits:
 
 ### Before Making Changes
 1. Read docs/requirements.md to understand project goals
-2. Review docs/architecture.md to understand how Portolan works
+2. Review docs/architecture.md to understand how CtrlSpec works
 3. Check docs/constraints.md for limitations and design decisions
 4. Review recent commits to see what's been worked on recently
 5. Check docs/decisions.md to understand why previous decisions were made
@@ -97,10 +97,10 @@ error: bun not found in PATH
 
 **Source Templates:**
 - `templates/docs/` - The core documentation templates that get distributed to projects
-- `templates/README.md` - Instructions for projects using Portolan
+- `templates/README.md` - Instructions for projects using CtrlSpec
 
-**Portolan's Own Docs:**
-- `docs/` - This directory; Portolan's own documentation (for developers of Portolan)
+**CtrlSpec's Own Docs:**
+- `docs/` - This directory; CtrlSpec's own documentation (for developers of CtrlSpec)
 
 **Tooling:**
 - `install.sh` - Installation script that copies templates and creates symlinks
@@ -128,8 +128,8 @@ error: bun not found in PATH
 
 - Capture rationale in commit messages using the format below
 - If it's a major architectural decision, add entry to `docs/decisions.md`
-- Update `architecture.md` or `constraints.md` if decision changes how Portolan works
-- Consider how this affects projects using Portolan (backwards compatibility)
+- Update `architecture.md` or `constraints.md` if decision changes how CtrlSpec works
+- Consider how this affects projects using CtrlSpec (backwards compatibility)
 
 ### Commit Message Format
 
@@ -157,7 +157,7 @@ Context:
 Consequences:
 - Requires curl/wget for installation
 - Single source of truth (GitHub repo)
-- Can version templates alongside Portolan releases
+- Can version templates alongside CtrlSpec releases
 ```
 
 ### Code Conventions
@@ -216,7 +216,7 @@ Consequences:
 
 When writing or updating documentation:
 - **requirements.md**: Update when adding new features or changing project goals
-- **architecture.md**: Update when changing how Portolan works or adding components
+- **architecture.md**: Update when changing how CtrlSpec works or adding components
 - **constraints.md**: Update when discovering new limitations or design boundaries
 - **testing.md**: Update when changing testing approach
 - **deployment.md**: Update installation/release process changes

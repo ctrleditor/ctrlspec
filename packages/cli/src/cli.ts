@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * Portolan CLI entry point
- * https://github.com/oheriko/portolan
+ * CtrlSpec CLI entry point
+ * https://github.com/ctrleditor/ctrlspec
  */
 
-console.log('Portolan CLI - coming soon!');
+console.log('CtrlSpec CLI - coming soon!');

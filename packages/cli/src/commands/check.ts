@@ -1,6 +1,6 @@
 /**
- * portolan check command
- * Validates Portolan documentation completeness
+ * ctrlspec check command
+ * Validates CtrlSpec documentation completeness
  */
 
 export async function check(path: string) {

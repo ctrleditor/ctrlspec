@@ -2,7 +2,7 @@
 
 ## Overview
 
-Portolan is a documentation framework—not a traditional application with runtime code. It consists of three main parts: **template files** (markdown documentation), **installation tooling** (bash scripts for setup), and **configuration files** (for MCP servers). The framework is designed to be dropped into any project and immediately provide AI-friendly documentation structure through templates, symlinks, and optional MCP integrations.
+CtrlSpec is a documentation framework—not a traditional application with runtime code. It consists of three main parts: **template files** (markdown documentation), **installation tooling** (bash scripts for setup), and **configuration files** (for MCP servers). The framework is designed to be dropped into any project and immediately provide AI-friendly documentation structure through templates, symlinks, and optional MCP integrations.
 
 The architecture prioritizes **simplicity**, **file-based design**, and **zero runtime dependencies**. All documentation is version-controlled markdown; setup is a simple bash script; configuration is human-editable JSON.
 
@@ -84,7 +84,7 @@ Building on the foundation above, Phase 2 introduces a TypeScript CLI tool for v
 
 #### Overview
 
-Portolan uses **Turborepo for task orchestration** and **Biome for linting/formatting**, with Biome running at the **root level** (not per-package) for optimal performance. All root-level `package.json` scripts delegate through `turbo run` to ensure consistent caching and task coordination.
+CtrlSpec uses **Turborepo for task orchestration** and **Biome for linting/formatting**, with Biome running at the **root level** (not per-package) for optimal performance. All root-level `package.json` scripts delegate through `turbo run` to ensure consistent caching and task coordination.
 
 **Reference:** [Turborepo + Biome Integration Guide](https://turborepo.dev/docs/guides/tools/biome)
 
@@ -274,7 +274,7 @@ Note: `test` is set to `cache: false` because test results need to be current; d
 ### CLI Components
 
 ```
-portolan-cli/
+ctrlspec-cli/
 ├── packages/
 │   ├── cli/                    # Main CLI tool
 │   │   ├── src/
@@ -319,7 +319,7 @@ portolan-cli/
 #### CLI Workflow
 
 ```
-User command: portolan check
+User command: ctrlspec check
     │
     ├─→ Scan docs/ directory
     ├─→ Parse each markdown file
@@ -350,14 +350,14 @@ User command: portolan check
 
 #### Distribution
 
-- **Distribution:** npm (package `portolan`)
+- **Distribution:** npm (package `ctrlspec`)
 - **Hosting:** GitHub (source, templates)
 - **CI/CD:** GitHub Actions
 - **Versioning:** Semantic versioning via git tags
 
 ## Technology Stack
 
-Portolan has layered dependencies based on use case:
+CtrlSpec has layered dependencies based on use case:
 
 ### Core (Bash Installation)
 
@@ -385,7 +385,7 @@ Portolan has layered dependencies based on use case:
 ### Infrastructure
 
 - **Hosting:** GitHub (templates stored in repository, source code)
-- **Distribution:** GitHub (curl | sh) or npm (`npm install -g portolan`)
+- **Distribution:** GitHub (curl | sh) or npm (`npm install -g ctrlspec`)
 - **CDN:** GitHub raw content CDN for templates
 - **Package Registry:** npm for CLI tool
 - **CI/CD:** GitHub Actions for tests and releases
@@ -393,7 +393,7 @@ Portolan has layered dependencies based on use case:
 ## Project Structure
 
 ```
-portolan/
+ctrlspec/
 ├── README.md                    # Main project documentation
 ├── install.sh                   # One-command installation script
 ├── .mcp.json                    # MCP server configuration (template)
@@ -410,7 +410,7 @@ portolan/
 │       ├── constraints.md      # Technical/business constraints template
 │       ├── testing.md          # Testing strategy template
 │       └── deployment.md       # Deployment guide template
-└── docs/                        # Portolan's own documentation (populated during dogfooding)
+└── docs/                        # CtrlSpec's own documentation (populated during dogfooding)
     ├── llm.md
     ├── requirements.md
     ├── architecture.md
@@ -425,8 +425,8 @@ portolan/
 ### User's Perspective
 
 ```bash
-# 1. User installs Portolan
-curl -fsSL https://raw.githubusercontent.com/oheriko/portolan/main/install.sh | sh
+# 1. User installs CtrlSpec
+curl -fsSL https://raw.githubusercontent.com/ctrleditor/ctrlspec/main/install.sh | sh
 
 # 2. Script automatically:
 #    - Downloads templates
@@ -443,12 +443,12 @@ curl -fsSL https://raw.githubusercontent.com/oheriko/portolan/main/install.sh | 
 
 ## Data Model
 
-Not applicable—Portolan is a static documentation framework with no database or runtime data model. All data is markdown files stored in git.
+Not applicable—CtrlSpec is a static documentation framework with no database or runtime data model. All data is markdown files stored in git.
 
 ## Scalability Considerations
 
 - **Per-project scale:** Each project maintains its own copy of templates (no shared state)
-- **Community scale:** Portolan itself is stateless; it can support unlimited projects
+- **Community scale:** CtrlSpec itself is stateless; it can support unlimited projects
 - **Distribution:** GitHub hosting means unlimited downloads via CDN
 - **Bottlenecks:** None identified; bash installation is instant
 
@@ -456,7 +456,7 @@ Not applicable—Portolan is a static documentation framework with no database o
 
 - **No external authentication required** for basic usage
 - **MCP servers** respect user-provided credentials (OAuth tokens for Atlassian, API keys for Fathom)
-- **No telemetry:** Portolan doesn't phone home or collect data
+- **No telemetry:** CtrlSpec doesn't phone home or collect data
 - **All documentation local:** Stays in user's git repository
 - **No permissions model:** Documentation is part of the repository—git permissions apply
 
@@ -474,7 +474,7 @@ Not applicable—Portolan is a static documentation framework with no database o
 - **Integration:** User configures in `.mcp.json` with Fathom API key
 - **Usage:** "Find meetings about auth and extract decisions" → generates decision entries
 
-Both are opt-in; Portolan works perfectly without them.
+Both are opt-in; CtrlSpec works perfectly without them.
 
 ## Development Environment
 
@@ -489,8 +489,8 @@ Both are opt-in; Portolan works perfectly without them.
 
 ```bash
 # Clone repo
-git clone https://github.com/oheriko/portolan.git
-cd portolan
+git clone https://github.com/ctrleditor/ctrlspec.git
+cd ctrlspec
 
 # Test installation script
 bash install.sh --test-mode

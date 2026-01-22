@@ -1,12 +1,12 @@
 {
-  "name": "portolan",
+  "name": "ctrlspec",
   "version": "0.1.0",
   "description": "CLI for managing AI-friendly documentation",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
-    "portolan": "./dist/cli.js"
+    "ctrlspec": "./dist/cli.js"
   },
   "scripts": {
     "dev": "bun src/cli.ts",
